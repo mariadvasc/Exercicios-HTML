@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinculação</title>
+</head>
+<body>
+
+    <form action="/vincular" method="POST">
+
+        Projeto:
+        <br>
+        <select name="projeto" required>
+            <option value="">Selecione...</option>
+            <option value="1">Projeto A</option>
+            <option value="2">Projeto B</option>
+        </select>
+
+        <br><br>
+
+        Participantes e Papéis:
+        <br><br>
+
+        <input type="checkbox" name="p1" value="1"> Participante 1 
+        <br>
+        Papel: <input type="text" name="papel1">
+
+        <br><br>
+
+        <input type="checkbox" name="p2" value="2"> Participante 2 
+        <br>
+        Papel: <input type="text" name="papel2">
+
+        <br><br>
+
+        <input type="checkbox" name="p3" value="3"> Participante 3 
+        <br>
+        Papel: <input type="text" name="papel3">
+
+        <br><br>
+
+        <input type="submit" value="Vincular">
+
+    </form>
+
+</body>
+</html>

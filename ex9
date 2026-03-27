@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatórios Personalizados</title>
+</head>
+<body>
+
+    <form action="/gerar-relatorio" method="GET">
+
+        Tipo de Relatório:
+        <br>
+        <select name="tipo_relatorio" required>
+            <option value="">Selecione o tipo...</option>
+            <option value="progresso">Relatório de Progresso</option>
+            <option value="participacao">Relatório de Participação</option>
+            <option value="entregas">Relatório de Entregas</option>
+        </select>
+
+        <br><br>
+
+        Projeto Correspondente:
+        <br>
+        <select name="projeto_id" required>
+            <option value="">Selecione o projeto...</option>
+            <option value="1">Projeto A</option>
+            <option value="2">Projeto B</option>
+            <option value="3">Projeto C</option>
+        </select>
+
+        <br><br>
+
+        Período Inicial:
+        <br>
+        <input type="date" name="data_inicio" required>
+
+        <br><br>
+
+        Período Final:
+        <br>
+        <input type="date" name="data_fim" required>
+
+        <br><br>
+
+        Observações Adicionais para o Relatório:
+        <br>
+        <textarea name="notas_relatorio" rows="4" cols="40"></textarea>
+
+        <br><br>
+
+        Formato de Saída:
+        <br>
+        <input type="radio" name="formato" value="pdf" checked> PDF
+        <br>
+        <input type="radio" name="formato" value="planilha"> Planilha
+
+        <br><br>
+
+        <input type="submit" value="Gerar Relatório">
+
+    </form>
+
+</body>
+</html>

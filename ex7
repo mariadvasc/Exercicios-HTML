@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Submissão de Entregas</title>
+</head>
+<body>
+
+    <form action="/enviar-entrega" method="POST" enctype="multipart/form-data">
+
+        Projeto Relacionado:
+        <br>
+        <select name="projeto_id" required>
+            <option value="">Selecione o projeto...</option>
+            <option value="1">Projeto Alfa</option>
+            <option value="2">Projeto Beta</option>
+        </select>
+
+        <br><br>
+
+        Tipo de Entrega:
+        <br>
+        <select name="tipo_entrega" required>
+            <option value="">Selecione o tipo...</option>
+            <option value="documento">Documento</option>
+            <option value="prototipo">Protótipo</option>
+            <option value="relatorio">Relatório</option>
+        </select>
+
+        <br><br>
+
+        Responsável pela Entrega:
+        <br>
+        <select name="responsavel_id" required>
+            <option value="">Selecione o responsável...</option>
+            <option value="1">Participante 1</option>
+            <option value="2">Participante 2</option>
+        </select>
+
+        <br><br>
+
+        Arquivo da Entrega:
+        <br>
+        <input type="file" name="arquivo_entrega" required>
+
+        <br><br>
+
+        Descrição da Entrega:
+        <br>
+        <textarea name="descricao_entrega" rows="5" cols="45" placeholder="Detalhes sobre o que está sendo entregue..."></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Enviar Entrega">
+
+    </form>
+
+</body>
+</html>

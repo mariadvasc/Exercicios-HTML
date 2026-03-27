@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Planejamento de Atividades</title>
+</head>
+<body>
+
+    <form action="/planejar-atividade" method="POST">
+
+        Projeto Relacionado:
+        <br>
+        <select name="projeto" required>
+            <option value="">Selecione um projeto...</option>
+            <option value="1">Projeto A</option>
+            <option value="2">Projeto B</option>
+        </select>
+
+        <br><br>
+
+        Título da Atividade:
+        <br>
+        <input type="text" name="titulo" required>
+
+        <br><br>
+
+        Descrição:
+        <br>
+        <textarea name="descricao" rows="4" cols="40"></textarea>
+
+        <br><br>
+
+        Início (Data e Hora):
+        <br>
+        <input type="datetime-local" name="inicio" required>
+
+        <br><br>
+
+        Término (Data e Hora):
+        <br>
+        <input type="datetime-local" name="fim" required>
+
+        <br><br>
+
+        Local:
+        <br>
+        <input type="text" name="local">
+
+        <br><br>
+
+        Participantes Envolvidos:
+        <br>
+        <input type="checkbox" name="p1" value="1"> Participante 1
+        <br>
+        <input type="checkbox" name="p2" value="2"> Participante 2
+        <br>
+        <input type="checkbox" name="p3" value="3"> Participante 3
+
+        <br><br>
+
+        <input type="submit" value="Salvar Atividade">
+
+    </form>
+
+</body>
+</html>

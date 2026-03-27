@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliação de Membros</title>
+</head>
+<body>
+
+    <form action="/salvar-avaliacao" method="POST">
+
+        Projeto Correspondente:
+        <br>
+        <select name="projeto_id" required>
+            <option value="">Selecione o projeto...</option>
+            <option value="1">Projeto Alfa</option>
+            <option value="2">Projeto Beta</option>
+        </select>
+
+        <br><br>
+
+        Avaliador:
+        <br>
+        <select name="avaliador_id" required>
+            <option value="">Selecione quem está avaliando...</option>
+            <option value="1">Participante 1</option>
+            <option value="2">Participante 2</option>
+        </select>
+
+        <br><br>
+
+        Participante Avaliado:
+        <br>
+        <select name="avaliado_id" required>
+            <option value="">Selecione o membro a ser avaliado...</option>
+            <option value="1">Participante 1</option>
+            <option value="2">Participante 2</option>
+            <option value="3">Participante 3</option>
+        </select>
+
+        <br><br>
+
+        Nota (0 a 10):
+        <br>
+        <input type="number" name="nota" min="0" max="10" step="1" required>
+
+        <br><br>
+
+        Comentários e Sugestões:
+        <br>
+        <textarea name="comentarios" rows="6" cols="50" placeholder="Descreva o desempenho e pontos de melhoria..."></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Enviar Avaliação">
+
+    </form>
+
+</body>
+</html>

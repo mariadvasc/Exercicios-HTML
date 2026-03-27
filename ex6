@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Presença</title>
+</head>
+<body>
+
+    <form action="/registrar-presenca" method="POST">
+
+        Evento ou Reunião Agendada:
+        <br>
+        <select name="evento_id" required>
+            <option value="">Selecione o evento...</option>
+            <option value="1">Reunião de Planejamento - 26/03</option>
+            <option value="2">Workshop de Alinhamento - 28/03</option>
+        </select>
+
+        <br><br>
+
+        Local Realizado:
+        <br>
+        <input type="text" name="local_realizado" placeholder="Sala ou Link" required>
+
+        <br><br>
+
+        Lista de Chamada e Justificativas:
+        <br><br>
+
+        <input type="checkbox" name="p1_presente" value="sim"> Participante 1
+        <br>
+        Justificativa se ausente: <input type="text" name="p1_justificativa">
+
+        <br><br>
+
+        <input type="checkbox" name="p2_presente" value="sim"> Participante 2
+        <br>
+        Justificativa se ausente: <input type="text" name="p2_justificativa">
+
+        <br><br>
+
+        <input type="checkbox" name="p3_presente" value="sim"> Participante 3
+        <br>
+        Justificativa se ausente: <input type="text" name="p3_justificativa">
+
+        <br><br>
+
+        Observações Gerais:
+        <br>
+        <textarea name="notas_presenca" rows="4" cols="40"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Salvar Presença">
+
+    </form>
+
+</body>
+</html>

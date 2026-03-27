@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Projeto</title>
+</head>
+<body>
+
+    <form action="/salvar-projeto" method="POST">
+        
+        <label for="nome_projeto">Nome do Projeto:</label><br>
+        <input type="text" id="nome_projeto" name="nome_projeto" required>
+        <br><br>
+
+        <label for="descricao">Descrição:</label><br>
+        <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea>
+        <br><br>
+
+        <label for="area_tematica">Área Temática:</label><br>
+        <input type="text" id="area_tematica" name="area_tematica" required>
+        <br><br>
+
+        <label for="responsavel">Responsável:</label><br>
+        <select id="responsavel" name="responsavel" required>
+            <option value="" disabled selected>Selecione um participante</option>
+            <option value="1">Participante A</option>
+            <option value="2">Participante B</option>
+            <option value="3">Participante C</option>
+        </select>
+        <br><br>
+
+        <label for="data_inicio">Data de Início:</label><br>
+        <input type="date" id="data_inicio" name="data_inicio" required>
+        <br><br>
+
+        <label for="data_fim">Data de Término:</label><br>
+        <input type="date" id="data_fim" name="data_fim" required>
+        <br><br>
+
+        <button type="submit">Registrar Projeto</button>
+
+    </form>
+
+</body>
+</html>

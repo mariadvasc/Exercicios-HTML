@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento de Reunião</title>
+</head>
+<body>
+
+    <form action="/agendar-reuniao" method="POST">
+
+        Projeto Relacionado:
+        <br>
+        <select name="projeto_id" required>
+            <option value="">Selecione o projeto...</option>
+            <option value="1">Projeto Alfa</option>
+            <option value="2">Projeto Beta</option>
+        </select>
+
+        <br><br>
+
+        Pauta da Reunião:
+        <br>
+        <input type="text" name="pauta" required size="50">
+
+        <br><br>
+
+        Data e Horário:
+        <br>
+        <input type="datetime-local" name="data_hora" required>
+
+        <br><br>
+
+        Local ou Link de Acesso:
+        <br>
+        <input type="text" name="local_link" placeholder="Sala 01 ou meet.google.com/..." size="50">
+
+        <br><br>
+
+        Participantes Convocados:
+        <br>
+        <input type="checkbox" name="participante" value="1"> Participante 1
+        <br>
+        <input type="checkbox" name="participante" value="2"> Participante 2
+        <br>
+        <input type="checkbox" name="participante" value="3"> Participante 3
+
+        <br><br>
+
+        Anotações Prévias:
+        <br>
+        <textarea name="anotacoes" rows="5" cols="40"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Agendar Reunião">
+
+    </form>
+
+</body>
+</html>

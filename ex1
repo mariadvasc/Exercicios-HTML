@@ -2,41 +2,57 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Participantes</title>
 </head>
 <body>
 
-    <form action="/processar-cadastro" method="POST">
-        
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" required>
-        <br><br>
+    <div class="container">
+        <div class="content-card">
+            <h1>Cadastro</h1>
+            
+            <form action="/processar-cadastro" method="POST">
+                
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
 
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required>
-        <br><br>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                </div>
 
-        <label for="telefone">Telefone:</label><br>
-        <input type="tel" id="telefone" name="telefone" required>
-        <br><br>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                </div>
 
-        <label for="cpf">CPF:</label><br>
-        <input type="text" id="cpf" name="cpf" required>
-        <br><br>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                </div>
 
-        <label for="funcao">Função no projeto:</label><br>
-        <input type="text" id="funcao" name="funcao" required>
-        <br><br>
+                <div class="form-group">
+                    <label for="funcao">Função no projeto:</label>
+                    <input type="text" id="funcao" name="funcao" placeholder="Ex: Desenvolvedor" required>
+                </div>
 
-        <label for="area">Área de atuação:</label><br>
-        <select id="area" name="area" required>
-            <option value="" disabled selected>Selecione uma opção</option>
-            <option value="lideranca">Liderança</option>
-            <option value="colaborador">Colaborador</option>
-            <option value="voluntario">Voluntário</option>
-        </select>
-        <br><br>
+                <div class="form-group">
+                    <label for="area">Área de atuação:</label>
+                    <select id="area" name="area" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="lideranca">Liderança</option>
+                        <option value="colaborador">Colaborador</option>
+                        <option value="voluntario">Voluntário</option>
+                    </select>
+                </div>
 
-        <button type="submit">Cadastrar</button>
+                <button type="submit" class="btn-primary">Finalizar Cadastro</button>
 
-    </form>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

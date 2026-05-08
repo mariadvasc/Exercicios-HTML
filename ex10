@@ -2,66 +2,66 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Evento Externo</title>
 </head>
 <body>
 
-    <form action="/cadastrar-evento" method="POST">
+    <div class="container">
+        <div class="content-card">
+            <h2>Novo Evento Externo</h2>
+            
+            <form action="/cadastrar-evento" method="POST">
 
-        Nome do Evento:
-        <br>
-        <input type="text" name="nome_evento" required size="40">
+                <div class="form-group">
+                    <label for="nome_evento">Nome do Evento:</label>
+                    <input type="text" id="nome_evento" name="nome_evento" required>
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label for="tipo_evento">Tipo de Evento:</label>
+                    <select id="tipo_evento" name="tipo_evento" required>
+                        <option value="">Selecione...</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="palestra">Palestra</option>
+                        <option value="oficina">Oficina</option>
+                    </select>
+                </div>
 
-        Tipo de Evento:
-        <br>
-        <select name="tipo_evento" required>
-            <option value="">Selecione...</option>
-            <option value="workshop">Workshop</option>
-            <option value="palestra">Palestra</option>
-            <option value="oficina">Oficina</option>
-        </select>
+                <div class="form-group">
+                    <label for="projeto_id">Projeto Associado:</label>
+                    <select id="projeto_id" name="projeto_id" required>
+                        <option value="">Selecione o projeto...</option>
+                        <option value="1">Projeto A</option>
+                        <option value="2">Projeto B</option>
+                    </select>
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label for="data_evento">Data do Evento:</label>
+                    <input type="date" id="data_evento" name="data_evento" required>
+                </div>
 
-        Projeto Associado:
-        <br>
-        <select name="projeto_id" required>
-            <option value="">Selecione o projeto...</option>
-            <option value="1">Projeto A</option>
-            <option value="2">Projeto B</option>
-        </select>
+                <div class="form-group">
+                    <label for="local_evento">Local:</label>
+                    <input type="text" id="local_evento" name="local_evento" placeholder="Endereço ou plataforma online" required>
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label for="publico_alvo">Público-Alvo:</label>
+                    <input type="text" id="publico_alvo" name="publico_alvo" placeholder="Ex: Estudantes, Comunidade local">
+                </div>
 
-        Data do Evento:
-        <br>
-        <input type="date" name="data_evento" required>
+                <div class="form-group">
+                    <label for="descricao_evento">Descrição Curta:</label>
+                    <textarea id="descricao_evento" name="descricao_evento" rows="4"></textarea>
+                </div>
 
-        <br><br>
+                <button type="submit" class="btn-primary">Cadastrar Evento</button>
 
-        Local:
-        <br>
-        <input type="text" name="local_evento" placeholder="Endereço ou plataforma online" size="40" required>
-
-        <br><br>
-
-        Público-Alvo:
-        <br>
-        <input type="text" name="publico_alvo" placeholder="Ex: Estudantes, Comunidade local" size="40">
-
-        <br><br>
-
-        Descrição Curta do Evento:
-        <br>
-        <textarea name="descricao_evento" rows="4" cols="40"></textarea>
-
-        <br><br>
-
-        <input type="submit" value="Cadastrar Evento">
-
-    </form>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

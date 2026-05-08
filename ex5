@@ -2,59 +2,68 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento de Reunião</title>
 </head>
 <body>
 
-    <form action="/agendar-reuniao" method="POST">
+    <div class="container">
+        <div class="content-card">
+            <h2>Agendamento de Reunião</h2>
 
-        Projeto Relacionado:
-        <br>
-        <select name="projeto_id" required>
-            <option value="">Selecione o projeto...</option>
-            <option value="1">Projeto Alfa</option>
-            <option value="2">Projeto Beta</option>
-        </select>
+            <form action="/agendar-reuniao" method="POST">
 
-        <br><br>
+                <div class="form-group">
+                    <label for="projeto_id">Projeto Relacionado:</label>
+                    <select id="projeto_id" name="projeto_id" required>
+                        <option value="">Selecione o projeto...</option>
+                        <option value="1">Projeto Alfa</option>
+                        <option value="2">Projeto Beta</option>
+                    </select>
+                </div>
 
-        Pauta da Reunião:
-        <br>
-        <input type="text" name="pauta" required size="50">
+                <div class="form-group">
+                    <label for="pauta">Pauta da Reunião:</label>
+                    <input type="text" id="pauta" name="pauta" required>
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label for="data_hora">Data e Horário:</label>
+                    <input type="datetime-local" id="data_hora" name="data_hora" required>
+                </div>
 
-        Data e Horário:
-        <br>
-        <input type="datetime-local" name="data_hora" required>
+                <div class="form-group">
+                    <label for="local_link">Local ou Link de Acesso:</label>
+                    <input type="text" id="local_link" name="local_link" placeholder="Sala 01 ou meet.google.com/...">
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label>Participantes Convocados:</label>
+                    <div style="padding-top: 5px;">
+                        <label style="font-weight: normal;">
+                            <input type="checkbox" name="participante" value="1"> Participante 1
+                        </label>
+                        <br>
+                        <label style="font-weight: normal;">
+                            <input type="checkbox" name="participante" value="2"> Participante 2
+                        </label>
+                        <br>
+                        <label style="font-weight: normal;">
+                            <input type="checkbox" name="participante" value="3"> Participante 3
+                        </label>
+                    </div>
+                </div>
 
-        Local ou Link de Acesso:
-        <br>
-        <input type="text" name="local_link" placeholder="Sala 01 ou meet.google.com/..." size="50">
+                <div class="form-group">
+                    <label for="anotacoes">Anotações Prévias:</label>
+                    <textarea id="anotacoes" name="anotacoes" rows="5"></textarea>
+                </div>
 
-        <br><br>
+                <input type="submit" value="Agendar Reunião" class="btn-primary">
 
-        Participantes Convocados:
-        <br>
-        <input type="checkbox" name="participante" value="1"> Participante 1
-        <br>
-        <input type="checkbox" name="participante" value="2"> Participante 2
-        <br>
-        <input type="checkbox" name="participante" value="3"> Participante 3
-
-        <br><br>
-
-        Anotações Prévias:
-        <br>
-        <textarea name="anotacoes" rows="5" cols="40"></textarea>
-
-        <br><br>
-
-        <input type="submit" value="Agendar Reunião">
-
-    </form>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

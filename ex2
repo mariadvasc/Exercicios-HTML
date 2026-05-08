@@ -2,44 +2,57 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Projeto</title>
 </head>
 <body>
 
-    <form action="/salvar-projeto" method="POST">
-        
-        <label for="nome_projeto">Nome do Projeto:</label><br>
-        <input type="text" id="nome_projeto" name="nome_projeto" required>
-        <br><br>
+    <div class="container">
+        <div class="content-card">
+            <h2>Cadastro de Projeto</h2>
+            
+            <form action="/salvar-projeto" method="POST">
+                
+                <div class="form-group">
+                    <label for="nome_projeto">Nome do Projeto:</label>
+                    <input type="text" id="nome_projeto" name="nome_projeto" required>
+                </div>
 
-        <label for="descricao">Descrição:</label><br>
-        <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea>
-        <br><br>
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                </div>
 
-        <label for="area_tematica">Área Temática:</label><br>
-        <input type="text" id="area_tematica" name="area_tematica" required>
-        <br><br>
+                <div class="form-group">
+                    <label for="area_tematica">Área Temática:</label>
+                    <input type="text" id="area_tematica" name="area_tematica" required>
+                </div>
 
-        <label for="responsavel">Responsável:</label><br>
-        <select id="responsavel" name="responsavel" required>
-            <option value="" disabled selected>Selecione um participante</option>
-            <option value="1">Participante A</option>
-            <option value="2">Participante B</option>
-            <option value="3">Participante C</option>
-        </select>
-        <br><br>
+                <div class="form-group">
+                    <label for="responsavel">Responsável:</label>
+                    <select id="responsavel" name="responsavel" required>
+                        <option value="" disabled selected>Selecione um participante</option>
+                        <option value="1">Participante A</option>
+                        <option value="2">Participante B</option>
+                        <option value="3">Participante C</option>
+                    </select>
+                </div>
 
-        <label for="data_inicio">Data de Início:</label><br>
-        <input type="date" id="data_inicio" name="data_inicio" required>
-        <br><br>
+                <div class="form-group">
+                    <label for="data_inicio">Data de Início:</label>
+                    <input type="date" id="data_inicio" name="data_inicio" required>
+                </div>
 
-        <label for="data_fim">Data de Término:</label><br>
-        <input type="date" id="data_fim" name="data_fim" required>
-        <br><br>
+                <div class="form-group">
+                    <label for="data_fim">Data de Término:</label>
+                    <input type="date" id="data_fim" name="data_fim" required>
+                </div>
 
-        <button type="submit">Registrar Projeto</button>
+                <button type="submit" class="btn-primary">Registrar Projeto</button>
 
-    </form>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

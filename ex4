@@ -2,65 +2,73 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planejamento de Atividades</title>
 </head>
 <body>
 
-    <form action="/planejar-atividade" method="POST">
+    <div class="container">
+        <div class="content-card">
+            <h2>Planejamento de Atividades</h2>
 
-        Projeto Relacionado:
-        <br>
-        <select name="projeto" required>
-            <option value="">Selecione um projeto...</option>
-            <option value="1">Projeto A</option>
-            <option value="2">Projeto B</option>
-        </select>
+            <form action="/planejar-atividade" method="POST">
 
-        <br><br>
+                <div class="form-group">
+                    <label for="projeto">Projeto Relacionado:</label>
+                    <select id="projeto" name="projeto" required>
+                        <option value="">Selecione um projeto...</option>
+                        <option value="1">Projeto A</option>
+                        <option value="2">Projeto B</option>
+                    </select>
+                </div>
 
-        Título da Atividade:
-        <br>
-        <input type="text" name="titulo" required>
+                <div class="form-group">
+                    <label for="titulo">Título da Atividade:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="4"></textarea>
+                </div>
 
-        Descrição:
-        <br>
-        <textarea name="descricao" rows="4" cols="40"></textarea>
+                <div class="form-group">
+                    <label for="inicio">Início (Data e Hora):</label>
+                    <input type="datetime-local" id="inicio" name="inicio" required>
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label for="fim">Término (Data e Hora):</label>
+                    <input type="datetime-local" id="fim" name="fim" required>
+                </div>
 
-        Início (Data e Hora):
-        <br>
-        <input type="datetime-local" name="inicio" required>
+                <div class="form-group">
+                    <label for="local">Local:</label>
+                    <input type="text" id="local" name="local">
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label>Participantes Envolvidos:</label>
+                    <div style="padding-top: 5px;">
+                        <label style="font-weight: normal;">
+                            <input type="checkbox" name="p1" value="1"> Participante 1
+                        </label>
+                        <br>
+                        <label style="font-weight: normal;">
+                            <input type="checkbox" name="p2" value="2"> Participante 2
+                        </label>
+                        <br>
+                        <label style="font-weight: normal;">
+                            <input type="checkbox" name="p3" value="3"> Participante 3
+                        </label>
+                    </div>
+                </div>
 
-        Término (Data e Hora):
-        <br>
-        <input type="datetime-local" name="fim" required>
+                <input type="submit" value="Salvar Atividade" class="btn-primary">
 
-        <br><br>
-
-        Local:
-        <br>
-        <input type="text" name="local">
-
-        <br><br>
-
-        Participantes Envolvidos:
-        <br>
-        <input type="checkbox" name="p1" value="1"> Participante 1
-        <br>
-        <input type="checkbox" name="p2" value="2"> Participante 2
-        <br>
-        <input type="checkbox" name="p3" value="3"> Participante 3
-
-        <br><br>
-
-        <input type="submit" value="Salvar Atividade">
-
-    </form>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

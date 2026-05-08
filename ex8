@@ -2,58 +2,60 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação de Membros</title>
 </head>
 <body>
 
-    <form action="/salvar-avaliacao" method="POST">
+    <div class="container">
+        <div class="content-card">
+            <h2>Avaliação de Membros</h2>
 
-        Projeto Correspondente:
-        <br>
-        <select name="projeto_id" required>
-            <option value="">Selecione o projeto...</option>
-            <option value="1">Projeto Alfa</option>
-            <option value="2">Projeto Beta</option>
-        </select>
+            <form action="/salvar-avaliacao" method="POST">
 
-        <br><br>
+                <div class="form-group">
+                    <label for="projeto_id">Projeto Correspondente:</label>
+                    <select id="projeto_id" name="projeto_id" required>
+                        <option value="">Selecione o projeto...</option>
+                        <option value="1">Projeto Alfa</option>
+                        <option value="2">Projeto Beta</option>
+                    </select>
+                </div>
 
-        Avaliador:
-        <br>
-        <select name="avaliador_id" required>
-            <option value="">Selecione quem está avaliando...</option>
-            <option value="1">Participante 1</option>
-            <option value="2">Participante 2</option>
-        </select>
+                <div class="form-group">
+                    <label for="avaliador_id">Avaliador:</label>
+                    <select id="avaliador_id" name="avaliador_id" required>
+                        <option value="">Selecione quem está avaliando...</option>
+                        <option value="1">Participante 1</option>
+                        <option value="2">Participante 2</option>
+                    </select>
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label for="avaliado_id">Participante Avaliado:</label>
+                    <select id="avaliado_id" name="avaliado_id" required>
+                        <option value="">Selecione o membro a ser avaliado...</option>
+                        <option value="1">Participante 1</option>
+                        <option value="2">Participante 2</option>
+                        <option value="3">Participante 3</option>
+                    </select>
+                </div>
 
-        Participante Avaliado:
-        <br>
-        <select name="avaliado_id" required>
-            <option value="">Selecione o membro a ser avaliado...</option>
-            <option value="1">Participante 1</option>
-            <option value="2">Participante 2</option>
-            <option value="3">Participante 3</option>
-        </select>
+                <div class="form-group">
+                    <label for="nota">Nota (0 a 10):</label>
+                    <input type="number" id="nota" name="nota" min="0" max="10" step="1" required>
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label for="comentarios">Comentários e Sugestões:</label>
+                    <textarea id="comentarios" name="comentarios" rows="6" placeholder="Descreva o desempenho e pontos de melhoria..."></textarea>
+                </div>
 
-        Nota (0 a 10):
-        <br>
-        <input type="number" name="nota" min="0" max="10" step="1" required>
+                <input type="submit" value="Enviar Avaliação" class="btn-primary">
 
-        <br><br>
-
-        Comentários e Sugestões:
-        <br>
-        <textarea name="comentarios" rows="6" cols="50" placeholder="Descreva o desempenho e pontos de melhoria..."></textarea>
-
-        <br><br>
-
-        <input type="submit" value="Enviar Avaliação">
-
-    </form>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

@@ -2,58 +2,71 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Presença</title>
 </head>
 <body>
 
-    <form action="/registrar-presenca" method="POST">
+    <div class="container">
+        <div class="content-card">
+            <h2>Registro de Presença</h2>
 
-        Evento ou Reunião Agendada:
-        <br>
-        <select name="evento_id" required>
-            <option value="">Selecione o evento...</option>
-            <option value="1">Reunião de Planejamento - 26/03</option>
-            <option value="2">Workshop de Alinhamento - 28/03</option>
-        </select>
+            <form action="/registrar-presenca" method="POST">
 
-        <br><br>
+                <div class="form-group">
+                    <label for="evento_id">Evento ou Reunião Agendada:</label>
+                    <select id="evento_id" name="evento_id" required>
+                        <option value="">Selecione o evento...</option>
+                        <option value="1">Reunião de Planejamento - 26/03</option>
+                        <option value="2">Workshop de Alinhamento - 28/03</option>
+                    </select>
+                </div>
 
-        Local Realizado:
-        <br>
-        <input type="text" name="local_realizado" placeholder="Sala ou Link" required>
+                <div class="form-group">
+                    <label for="local_realizado">Local Realizado:</label>
+                    <input type="text" id="local_realizado" name="local_realizado" placeholder="Sala ou Link" required>
+                </div>
 
-        <br><br>
+                <p><strong>Lista de Chamada e Justificativas:</strong></p>
+                <br>
 
-        Lista de Chamada e Justificativas:
-        <br><br>
+                <!-- Participante 1 -->
+                <div class="form-group" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <label>
+                        <input type="checkbox" name="p1_presente" value="sim"> Participante 1 (Presente)
+                    </label>
+                    <label for="p1_justificativa" style="font-weight: normal; font-size: 0.85rem;">Justificativa se ausente:</label>
+                    <input type="text" id="p1_justificativa" name="p1_justificativa">
+                </div>
 
-        <input type="checkbox" name="p1_presente" value="sim"> Participante 1
-        <br>
-        Justificativa se ausente: <input type="text" name="p1_justificativa">
+                <!-- Participante 2 -->
+                <div class="form-group" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <label>
+                        <input type="checkbox" name="p2_presente" value="sim"> Participante 2 (Presente)
+                    </label>
+                    <label for="p2_justificativa" style="font-weight: normal; font-size: 0.85rem;">Justificativa se ausente:</label>
+                    <input type="text" id="p2_justificativa" name="p2_justificativa">
+                </div>
 
-        <br><br>
+                <!-- Participante 3 -->
+                <div class="form-group" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <label>
+                        <input type="checkbox" name="p3_presente" value="sim"> Participante 3 (Presente)
+                    </label>
+                    <label for="p3_justificativa" style="font-weight: normal; font-size: 0.85rem;">Justificativa se ausente:</label>
+                    <input type="text" id="p3_justificativa" name="p3_justificativa">
+                </div>
 
-        <input type="checkbox" name="p2_presente" value="sim"> Participante 2
-        <br>
-        Justificativa se ausente: <input type="text" name="p2_justificativa">
+                <div class="form-group">
+                    <label for="notas_presenca">Observações Gerais:</label>
+                    <textarea id="notas_presenca" name="notas_presenca" rows="4"></textarea>
+                </div>
 
-        <br><br>
+                <input type="submit" value="Salvar Presença" class="btn-primary">
 
-        <input type="checkbox" name="p3_presente" value="sim"> Participante 3
-        <br>
-        Justificativa se ausente: <input type="text" name="p3_justificativa">
-
-        <br><br>
-
-        Observações Gerais:
-        <br>
-        <textarea name="notas_presenca" rows="4" cols="40"></textarea>
-
-        <br><br>
-
-        <input type="submit" value="Salvar Presença">
-
-    </form>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

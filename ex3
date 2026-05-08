@@ -2,46 +2,64 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinculação</title>
 </head>
 <body>
 
-    <form action="/vincular" method="POST">
+    <div class="container">
+        <div class="content-card">
+            <h2>Vinculação</h2>
 
-        Projeto:
-        <br>
-        <select name="projeto" required>
-            <option value="">Selecione...</option>
-            <option value="1">Projeto A</option>
-            <option value="2">Projeto B</option>
-        </select>
+            <form action="/vincular" method="POST">
 
-        <br><br>
+                <!-- Campo de Seleção do Projeto -->
+                <div class="form-group">
+                    <label for="projeto">Projeto:</label>
+                    <select id="projeto" name="projeto" required>
+                        <option value="">Selecione...</option>
+                        <option value="1">Projeto A</option>
+                        <option value="2">Projeto B</option>
+                    </select>
+                </div>
 
-        Participantes e Papéis:
-        <br><br>
+                <p><strong>Participantes e Papéis:</strong></p>
+                <br>
 
-        <input type="checkbox" name="p1" value="1"> Participante 1 
-        <br>
-        Papel: <input type="text" name="papel1">
+                <!-- Participante 1 -->
+                <div class="form-group" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <label>
+                        <input type="checkbox" name="p1" value="1"> Participante 1
+                    </label>
+                    <label for="papel1">Papel:</label>
+                    <input type="text" id="papel1" name="papel1">
+                </div>
 
-        <br><br>
+                <!-- Participante 2 -->
+                <div class="form-group" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <label>
+                        <input type="checkbox" name="p2" value="2"> Participante 2
+                    </label>
+                    <label for="papel2">Papel:</label>
+                    <input type="text" id="papel2" name="papel2">
+                </div>
 
-        <input type="checkbox" name="p2" value="2"> Participante 2 
-        <br>
-        Papel: <input type="text" name="papel2">
+                <!-- Participante 3 -->
+                <div class="form-group" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <label>
+                        <input type="checkbox" name="p3" value="3"> Participante 3
+                    </label>
+                    <label for="papel3">Papel:</label>
+                    <input type="text" id="papel3" name="papel3">
+                </div>
 
-        <br><br>
+                <input type="submit" value="Vincular" class="btn-primary">
 
-        <input type="checkbox" name="p3" value="3"> Participante 3 
-        <br>
-        Papel: <input type="text" name="papel3">
+            </form>
+        </div>
+    </div>
 
-        <br><br>
-
-        <input type="submit" value="Vincular">
-
-    </form>
-
+</body>
+</html>
 </body>
 </html>
